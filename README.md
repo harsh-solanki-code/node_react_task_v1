@@ -7,7 +7,7 @@ Preview URLs are logged in the server console.
 - Ethereal Email used for local/testing
 - Gmail SMTP can be configured via env for production
 
-
+# optimization Part
 To ensure scalability with over 1M bookings, booking conflict detection is performed using indexed range queries at the database level. All booking types are normalized into time ranges and a standard interval overlap condition is applied. Booking creation is wrapped in a transaction to prevent race conditions under concurrent requests.
 
 # Overlap check logic intution
@@ -34,3 +34,13 @@ To ensure scalability with over 1M bookings, booking conflict detection is perfo
       That single rule enforces all booking constraints.
 
     - this one condition covers all the rules for that booking system.
+
+
+### Authentication
+- JWT based authentication
+- Users must verify email before login
+- Protected routes enforced on frontend
+
+### Tech Stack
+- Backend: Node.js, Express, TypeORM, MySQL
+- Frontend: React, Redux Toolkit, React Hook Form(not fully finished)
